@@ -9,13 +9,17 @@ function shs_add_to_field(field){
 function shs_delete_field( field ) {
 	jQuery(field).parent().slideUp('fast', function(e){ jQuery(this).html(''); });
 }
+jQuery.noConflict();
 jQuery(document).ready(function() {
 	jQuery( "#joptions" ).sortable();
 	jQuery( "#joptions li" ).css({'cursor':'move'});
 });
 
+jQuery.noConflict();
 jQuery(document).ready(function(){
 	jQuery('.shs_admin_wrapper .handlediv,.shs_admin_wrapper .hndle').click(function(){
 		jQuery(this).parent().find('.inside').slideToggle("fast");
+	//	jQuery(this).parent().find('.inside').fadeOut( "fast" );
+               
 	});
 });

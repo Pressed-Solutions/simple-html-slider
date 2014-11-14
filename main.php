@@ -106,7 +106,7 @@ function shs_slider_show()
 						} // if($content)
 					}// foreach($contents as $content)
 				} // if($contents)
-	$toret.='</div></div><div style="position:relative;"><a class="shtml_wpf_ref" title="SHTML Slider PRO"  href="'.$shtmlFrom.'" target="_blank" style="outline:none !important;background: none repeat scroll 0 0 #EEEEEE !important; border: 1px solid #AAAAAA !important; color: #444444 !important; display: block !important; font-family: Arial !important; font-size: 10px !important; font-weight: bold; height: 12px !important; line-height: 12px !important; text-align: center; text-decoration: none; text-indent: 0 !important; visibility: visible !important; width: 24px !important;position:absolute !important;left:0;top:0;" > '.__('SHS','shs').'</a></div>';
+	$toret.='</div></div>';
     $toret.="
 <script type='text/javascript'>
 jQuery(document).ready(function() {
@@ -186,7 +186,10 @@ switch($direction)
 			jQuery('#shs_slider_ul:not(:animated)').animate({'left' : left_indent},$trans_time,
 			function(){
 				jQuery('#shs_slider_ul .shs_items:first').before(jQuery('#shs_slider_ul .shs_items:last'));
-				jQuery('#shs_slider_ul').css({'left':'-$width'});
+				jQuery('#shs_slider_ul').css({'left':'-$width'}); 
+                                  
+                                   
+                                 
 			});
 		}";
 		break;
